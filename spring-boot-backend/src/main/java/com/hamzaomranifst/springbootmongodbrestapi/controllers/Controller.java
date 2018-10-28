@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin("*")
-public class StudentController {
+public class Controller {
 
     private final String SPARK_STORE = "/home/hamza/spark_storage/";
     private final String DIR_FILES = "/home/hamza/Desktop/berexia_data/";
