@@ -1,0 +1,51 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+.formPanel {
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+  width: 29%;
+  height: 700px;
+  background-color: white;
+}
+
+.diagPanel {
+  border: 1px solid white;
+  display: inline-block;
+  vertical-align: top;
+  width: 69%;
+  height: 400px;
+}
+
+.global {
+  border: 1px solid white;
+  width:100%;
+  white-space:nowrap;
+  height: 800px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid black;
+}
+th{
+  padding: 15px;
+  text-align: left;
+  border: 1px solid black;
+  background-color: grey;
+}
+tr:nth-child(even) {background-color: grey;}

@@ -1,0 +1,4 @@
+/home/hamza/Desktop/DemoHackathon/SpringBoot-MongoDB-maven/spring-boot-backend/src/main/java/com/hamzaomranifst/springbootmongodbrestapi/SpringBootAngularMongoDbRestApiApplication.java
+/home/hamza/Desktop/DemoHackathon/SpringBoot-MongoDB-maven/spring-boot-backend/src/main/java/com/hamzaomranifst/springbootmongodbrestapi/models/Student.java
+/home/hamza/Desktop/DemoHackathon/SpringBoot-MongoDB-maven/spring-boot-backend/src/main/java/com/hamzaomranifst/springbootmongodbrestapi/controllers/StudentController.java
+/home/hamza/Desktop/DemoHackathon/SpringBoot-MongoDB-maven/spring-boot-backend/src/main/java/com/hamzaomranifst/springbootmongodbrestapi/repositories/StudentRepository.java

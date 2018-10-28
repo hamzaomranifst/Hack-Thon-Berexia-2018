@@ -1,0 +1,166 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="global">
+  <h1 style="text-align:center">
+    Berexia ETL
+  </h1>
+  <div class="header" >
+      <button type="button" (click)=runUploadPreapare()>Run</button>
+  </div>
+  <br>
+  <div class="formPanel">
+
+
+    <form *ngIf="node && isSelectTransformation()" [formGroup]="form" (ngSubmit)="onCommitDetails()">
+      Node Details:
+          <div  *ngFor="let column of columns; let i = index" >
+            <input type="checkbox" id="{{column}}" name="{{column}}" formControlName="{{column}}"
+                  value="{{column}}"/> 
+                  {{column.valueOf()}}
+          </div>
+      <div><label>Query: </label><input type="text" name="query"></div>
+      <button type="submit">Commit Details</button>
+      <button (click)="onCancelChanges()">cancel</button>
+      <button (click)="extractHeader()">Configurer</button>
+    </form>
+
+
+    <form *ngIf="node && isCombineTransformation()" #form="ngForm" (ngSubmit)="onCommitDetails()">
+      <div>Node Details:</div>
+      
+      <div>
+        <select >
+            <option value="columns"></option>
+          <option value="columns">Life_ID</option>
+          <option value="columns">Policy_ID</option>
+          <option value="columns">Gender</option>
+          <option value="columns">Risk_Amount_Insurer</option>
+        </select>
+      
+
+     
+          <select >
+              <option value="columns"></option>
+            <option value="columns">Life_ID</option>
+            <option value="columns">Policy_ID</option>
+          </select>
+        
+      </div>
+      <div>
+          <select >
+              <option value="columns"></option>
+            <option value="columns">Life_ID</option>
+            <option value="columns">Policy_ID</option>
+            <option value="columns">Gender</option>
+            <option value="columns">Risk_Amount_Insurer</option>
+          </select>
+        
+  
+       
+            <select >
+                <option value="columns"></option>
+              <option value="columns">Life_ID</option>
+              <option value="columns">Policy_ID</option>
+            </select>
+          
+        </div>
+        <div>
+            <select >
+                <option value="columns"></option>
+              <option value="columns">Life_ID</option>
+              <option value="columns">Policy_ID</option>
+              <option value="columns">Gender</option>
+              <option value="columns">Risk_Amount_Insurer</option>
+            </select>
+          
+    
+         
+              <select >
+                  <option value="columns"></option>
+                <option value="columns">Life_ID</option>
+                <option value="columns">Policy_ID</option>
+              </select>
+            
+          </div>   
+          
+          <div>
+              <select >
+                  <option value="columns"></option>
+                <option value="columns">Life_ID</option>
+                <option value="columns">Policy_ID</option>
+                <option value="columns">Gender</option>
+                <option value="columns">Risk_Amount_Insurer</option>
+              </select>
+            
+      
+           
+                <select >
+                    <option value="columns"></option>
+                  <option value="columns">Life_ID</option>
+                  <option value="columns">Policy_ID</option>
+                </select>
+              
+            </div>
+        
+        <div>
+            <button type="submit">Commit Details</button>
+            <button (click)="onCancelChanges()">Cancel Changes</button>
+            <button (click)="ontest()">Changes</button>
+        </div>
+      
+    </form>
+
+
+    <form *ngIf="node && isGroupByTransformation()" [formGroup]="form" (ngSubmit)="onCommitDetails()">
+      Node Details:
+          <div  *ngFor="let column of columns; let i = index" >
+            <input type="checkbox" id="{{column}}" name="{{column}}" formControlName="{{column}}"
+                  value="{{column}}"/> 
+                  {{columns[i].valueOf()}}
+          </div>
+      <div><label>Aggregation: </label><input type="text" name="aggregation"></div>
+      <button type="submit">Commit Details</button>
+      <button (click)="onCancelChanges()">cancel</button>
+      <button (click)="extractHeader()">Configurer</button>
+    </form>
+
+    <div *ngIf="node && isDataset()">
+     
+    </div>
+    
+
+  </div>
+  <app-diagram-editor
+  class="diagPanel"
+ [model]="model"
+ (nodeSelected)="showDetails($event)"
+ (modelChanged)="onModelChanged($event)">
+  </app-diagram-editor>
+  <br><br>
+
+  <div style="overflow-x:auto;">
+    <h2>Table Result</h2>
+  <table class="table table-striped" *ngIf="showTable">
+      <thead>
+      <tr>
+        <th>Life_ID</th>
+        <th>State_ID</th>
+        <th>Risk_Amount</th>
+        <!-- <th>Action</th> -->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let tab of tabmodel">
+        <td>{{tab.lid}}</td>
+        <td>{{tab.sid}}</td>
+        <td>{{tab.amr}}</td>
+        <!--
+        <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button>
+          <button class="btn btn-danger" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+        -->
+      </tr>
+      </tbody>
+    </table>
+    </div>
+  
+  
+</div>

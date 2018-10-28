@@ -1,0 +1,5 @@
+com/hamzaomranifst/springbootmongodbrestapi/models/ModelShow.class
+com/hamzaomranifst/springbootmongodbrestapi/repositories/StudentRepository.class
+com/hamzaomranifst/springbootmongodbrestapi/models/Student.class
+com/hamzaomranifst/springbootmongodbrestapi/controllers/StudentController.class
+com/hamzaomranifst/springbootmongodbrestapi/SpringBootAngularMongoDbRestApiApplication.class
